@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color:white;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  width:100%;
+  height:100vh;
+  border:solid black 1px;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  width:500px;
+  margin:50px auto;
+  border:solid black 1px;
+  overflow: hidden;
+}
+
+.slider__images {
+  display: flex;
+  gap:10px;
+  transform: translateX(765px);
+  transition: transform 2s;
+  border:solid black 1px;
+}
+.slider__images p {
+  display: inline-block;
+  padding-top: 15px;
+}
+.slider__image {
+  object-fit: contain;
+  width:500px;
+  height:500px; 
+  background-size: contain;
+  border: solid 3px #051937;
+  border-radius: 10px;
+}
+
+
+
+.slider__bottom-element {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: normal;
+}
+
+.slider__buttons {
+  display:flex;
+  gap:10px;
+}
+
+#slide1:checked ~ .slider__images{
+  transform: translateX(765px);
+} 
+
+#slide2:checked ~ .slider__images{
+  transform: translateX(255px);
+}
+#slide3:checked ~ .slider__images {
+  transform: translateX(-255px);
+}
+#slide4:checked ~ .slider__images {
+  transform: translateX(-765px);
+}
+/*.slider__images*/
+
+input {
+  display:none;
+}
+
+label {
+  box-sizing: content-box;
+  cursor:pointer;
+  height:10px;
+  width:10px;
+  border-radius: 50%;
+  margin: 10px;;
+  border: solid white 1px;
+  transition: background 2s;
+}
+
+.slider__inner-button {
+  height:6px;
+  width:6px;
+  margin: 2px auto;
+  border-radius: 50%;
+  background-color: black;
+}
+
+#slide1:checked ~ .slider__bottom-element >.slider__buttons label:nth-of-type(1) > .slider__inner-button,
+#slide2:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(2) > .slider__inner-button,
+#slide3:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(3) > .slider__inner-button,
+#slide4:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(4) > .slider__inner-button {
+  background-color: white;
+}
