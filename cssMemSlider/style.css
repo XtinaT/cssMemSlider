@@ -17,7 +17,12 @@ body {
 .wrapper {
   width:100%;
   height:100vh;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  display: flex;
+  align-items: center;
+  background-color: #d8dbe2;
+	background-image: 
+		repeating-radial-gradient(circle at 0 100%, rgba(27,27,30, 0.1), rgba(88,164,176, 0.15) 1px, rgba(216,219,226, 0.2) 2px, rgba(88,164,176, 0.15) 3px, rgba(27,27,30, 0.1) 4px), 
+		radial-gradient(circle at 0 100%, #1b1b1e, #373f51, #58a4b0, #a9bcd0, #d8dbe2);
 }
 
 
@@ -28,33 +33,35 @@ body {
   gap: 20px;
   padding: 0 20px;
   width:500px;
-  padding: 50px 0;
   margin:auto;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgba(34, 60, 80, 0.2);
 }
 
 .slider__images {
   display: flex;
   gap:10px;
-  transform: translateX(765px);
+  transform: translateX(0%);
   transition: transform 2s;
+  
 }
 .slider__images p {
   display: inline-block;
   padding-top: 15px;
+  padding-left: 15px;
 }
 .slider__image {
-  
   width:500px;
   height:500px; 
   
 }
 
 img {
-  border: solid 3px #051937;
   border-radius: 10px;
   width:495px;
   height:495px;
+  
 }
 
 .slider__bottom-element {
@@ -70,17 +77,17 @@ img {
 }
 
 #slide1:checked ~ .slider__images{
-  transform: translateX(765px);
+  transform: translateX(768px);
 } 
 
 #slide2:checked ~ .slider__images{
-  transform: translateX(255px);
+  transform: translateX(258px);
 }
 #slide3:checked ~ .slider__images {
-  transform: translateX(-255px);
+  transform: translateX(-252px);
 }
 #slide4:checked ~ .slider__images {
-  transform: translateX(-765px);
+  transform: translateX(-762px);
 }
 /*.slider__images*/
 
@@ -112,7 +119,7 @@ label {
 #slide2:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(2) > .slider__inner-button,
 #slide3:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(3) > .slider__inner-button,
 #slide4:checked ~ .slider__bottom-element > .slider__buttons label:nth-of-type(4) > .slider__inner-button {
-  background-color: #A8EB12;
+  background-color: #9CDE9F;
   height:17px;
   width:17px;
   margin-left:-1px;
@@ -120,5 +127,15 @@ label {
 }
 
 label:hover{
-  border: solid #A8EB12 2px;
+  border: solid #9CDE9F 2px;
+}
+
+@media all and (max-width:460px){
+  .slider__bottom-element {
+    justify-content: center;
+  }
+
+  .slider__images p {
+    padding-top: 50px;
+  }
 }
