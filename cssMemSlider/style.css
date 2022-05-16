@@ -158,6 +158,10 @@ label:hover {
   border: solid #9cde9f 2px;
 }
 
+label:active {
+  transform: scale(1.2);
+}
+
 @media all and (max-width: 560px) {
   .slider__bottom-element {
     transform: translateY(-2.3rem);
