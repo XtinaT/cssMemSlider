@@ -45,25 +45,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 10px 0;
+  padding: 1rem 1rem 0;
   width: 65%;
-  max-width: 500px;
+  max-width: 50rem;
   margin: auto;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(34, 60, 80, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 1rem rgba(34, 60, 80, 0.2);
 }
 
 .slider__images {
   display: flex;
   width: 430%;
-  gap: 20px;
+  gap: 2rem;
   transition: transform 2s;
 }
 .slider__images p {
   display: inline-block;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
 }
 .slider__image {
   width: 100%;
@@ -71,7 +71,7 @@ body {
 }
 
 img {
-  border-radius: 10px;
+  border-radius: 1rem;
   width: 95%;
   /*width:495px;*/
   /* height:495px;*/
@@ -82,7 +82,7 @@ img {
   justify-content: flex-end;
   align-items: flex-start;
   align-self: normal;
-  transform: translateY(-30px);
+  transform: translateY(-3rem);
 }
 
 .slider__buttons {
@@ -111,19 +111,19 @@ input {
 label {
   box-sizing: content-box;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
-  margin: 10px;
+  margin: 1rem;
   border: solid white 2px;
   transition: background 2s;
 }
 
 .slider__inner-button {
-  height: 35px;
-  width: 35px;
-  margin-left: -10px;
-  margin-top: -10px;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-left: -1rem;
+  margin-top: -1rem;
   border-radius: 50%;
 }
 
@@ -148,10 +148,10 @@ label {
   label:nth-of-type(4)
   > .slider__inner-button {
   background-color: #9cde9f;
-  height: 17px;
-  width: 17px;
-  margin-left: -1px;
-  margin-top: -1px;
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-left: -0.1rem;
+  margin-top: -0.1rem;
 }
 
 label:hover {
@@ -160,19 +160,19 @@ label:hover {
 
 @media all and (max-width: 560px) {
   .slider__bottom-element {
-    transform: translateY(-23px);
+    transform: translateY(-2.3rem);
   }
   label {
-    height: 10px;
-    width: 10px;
-    margin: 5px;
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
   }
 
   .slider__inner-button {
-    height: 20px;
-    width: 20px;
-    margin-left: -5px;
-    margin-top: -5px;
+    height: 2rem;
+    width: 2rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
     border-radius: 50%;
   }
 
@@ -197,21 +197,21 @@ label:hover {
     label:nth-of-type(4)
     > .slider__inner-button {
     background-color: #9cde9f;
-    height: 12px;
-    width: 12px;
-    margin-left: -1px;
-    margin-top: -1px;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: -0.1rem;
+    margin-top: -0.1rem;
   }
 }
 
 @media all and (max-width: 460px) {
   .slider__bottom-element {
     justify-content: center;
-    transform: translateY(-70px);
+    transform: translateY(-7rem);
   }
 
   .slider__images p {
-    padding-top: 50px;
+    padding-top: 5rem;
   }
 
   .slider {
@@ -219,16 +219,16 @@ label:hover {
     padding-top: 3%;
   }
   label {
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
-    margin: 10px;
+    margin: 1rem;
   }
   .slider__inner-button {
-    height: 40px;
-    width: 40px;
-    margin-left: -10px;
-    margin-top: -10px;
+    height: 4rem;
+    width: 4rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
   }
   #slide1:checked
     ~ .slider__bottom-element
@@ -251,9 +251,9 @@ label:hover {
     label:nth-of-type(4)
     > .slider__inner-button {
     background-color: #9cde9f;
-    height: 22px;
-    width: 22px;
-    margin-left: -1px;
-    margin-top: -1px;
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-left: -0.1rem;
+    margin-top: -0.1rem;
   }
 }
